@@ -155,6 +155,7 @@
 	NPC[0].world = 0;
 	NPC[0].x = 0;
 	NPC[0].y = 0;
+	NPC[0].done=false; // initialized as false if they want an item.
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // player.js Variables
@@ -172,6 +173,7 @@ var moveUp = false;
 var moveDown = false;
 var moveLeft = false;
 var moveRight = false;
+var numTurns=20;//number of turns left
 		
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // worlds.js Variables
