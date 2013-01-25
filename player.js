@@ -3,11 +3,22 @@
  *		player data is stored in the player Object.
 */
 
+// getPlayerPos(): Gets the 50x50 square the player is inhabiting.
+function getPlayerPos(){
+	var pos = new Object();
+	pos.x = player.x / 50;
+	pos.y = (player.y - 100) / 50;
+	
+	console.log("Player position: (" + pos.x + ", " + pos.y + ")");
+	return pos;
+}
+
+// drawPlayer(): Draws the player.
 function drawPlayer(){
 	if (moveUp)
 	{
 		player.dir = 2;
-		if (0 <= player.y)	
+		if (100 <= player.y)	
 			player.y -= 5;
 	}
 	else if (moveDown)

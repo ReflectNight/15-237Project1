@@ -70,6 +70,7 @@ data.js:
 		worldMap[i].ID
 		worldMap[i].img
 			worldMap[i].img.src
+		worldMap[i].grid[x][y]
 	state
 	current_world
 	

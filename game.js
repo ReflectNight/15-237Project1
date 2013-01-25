@@ -10,10 +10,23 @@ function drawBG(){
 		ctx.drawImage(worldMap[current_world].img, 0, 0, 450, 450); // resize to 150x150
 }
 
+// drawObjAbove(playerLoc): Draws all objects above the player.
+function drawObjAbove(playerLoc){
+}
+
+// drawObjBelow(playerLoc): Draws all objects below the player.
+function drawObjBelow(playerLoc){
+	
+}
+
 // onTimer(): Handles the event when page is refreshed. 
 function onTimer(){
+	var pos = getPlayerPos();
+
 	drawBG();
+	drawObjAbove(pos.x);
 	drawPlayer();
+	drawObjBelow(pos.x);
 }
 
 // run(): Executes the game.

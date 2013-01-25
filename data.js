@@ -125,7 +125,7 @@
 // NPCs.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-	var numNPCs = 3;
+	var numNPCs = 1;
 	var NPC = new Array(numNPCs);
 	var numFree = 2;
 	var numHint = 2;
@@ -180,7 +180,7 @@ var numTurns=20;//number of turns left
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 // Initialization of Worlds Data
-var numWorlds = 3;
+var numWorlds = 4;
 
 var worldMap = new Array(numWorlds);
 for (var i = 0; i < numWorlds; i++)
@@ -189,9 +189,9 @@ for (var i = 0; i < numWorlds; i++)
 	worldMap[i].ID = i;
 	worldMap[i].img = new Image();
 	
-	// 6 x 9 grid of 50x50 pixel squares.
+	// 7 x 9 grid of 50x50 pixel squares.
 	// Indexed worldMap[i].grid[row][col].
-	worldMap[i].grid = new Array(6);
+	worldMap[i].grid = new Array(7);
 	for (var j = 0; j < worldMap[i].grid.length; j++)
 		worldMap[i].grid[j] = new Array(9);
 }
@@ -199,6 +199,18 @@ for (var i = 0; i < numWorlds; i++)
 worldMap[0].img.src = "Images/Worlds/sky.jpg";
 worldMap[1].img.src = "Images/Worlds/forest.jpg";
 worldMap[2].img.src = "Images/Worlds/flower.jpg";
+worldMap[3].img.src = "Images/Worlds/sampleBG.png";
+
+/** PUT ITEMS AND NPCS INTO GRID **/
+for (var i = 0; i < item.length; i++)
+{
+	worldMap[item[i].world].grid[item[i].x][item[i].y];
+}
+
+for (var i = 0; i < NPC.length; i++)
+{
+	worldMap[NPC[i].world].grid[NPC[i].x][NPC[i].y];
+}
 
 // World
 // state: 0 denotes player is in menu screen, 1 denotes player is in a world.

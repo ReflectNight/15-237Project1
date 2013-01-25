@@ -52,6 +52,12 @@ function updateDown(keyCode, x){
 				state = 1;
 			}
 			break;
+		case 51:
+			if (state === 0){
+				goToWorld(3);
+				state = 1;
+			}
+			break;
 		default:
 			break;
 	}
