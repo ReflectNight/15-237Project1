@@ -31,6 +31,7 @@
 	for (var i = 0; i < numItems; i++)
 	{
 		item[i] = new Object();
+		item[i].type = "item";
 		item[i].ID = i;
 		item[i].img = new Image();
 	}
@@ -133,6 +134,7 @@
 	for (var i = 0; i < numNPCs; i++)
 	{
 		NPC[i] = new Object();
+		item[i].type = "NPC";
 		NPC[i].ID = i;
 		NPC[i].img = new Image();
 		NPC[i].freeDialogue = new Array(numFree);
@@ -193,30 +195,32 @@ for (var i = 0; i < numWorlds; i++)
 	// Indexed worldMap[i].grid[row][col].
 	worldMap[i].grid = new Array(7);
 	for (var j = 0; j < worldMap[i].grid.length; j++)
+	{
 		worldMap[i].grid[j] = new Array(9);
+	}
 }
 
-worldMap[0].img.src = "Images/Worlds/sky.jpg";
+worldMap[0].img.src = "Images/Worlds/sampleBG.png";
 worldMap[1].img.src = "Images/Worlds/forest.jpg";
 worldMap[2].img.src = "Images/Worlds/flower.jpg";
-worldMap[3].img.src = "Images/Worlds/sampleBG.png";
+worldMap[3].img.src = "Images/Worlds/sky.jpg";
 
 /** PUT ITEMS AND NPCS INTO GRID **/
 for (var i = 0; i < item.length; i++)
 {
-	worldMap[item[i].world].grid[item[i].x][item[i].y];
+	worldMap[item[i].world].grid[item[i].x][item[i].y] = item[i];
 }
 
 for (var i = 0; i < NPC.length; i++)
 {
-	worldMap[NPC[i].world].grid[NPC[i].x][NPC[i].y];
+	worldMap[NPC[i].world].grid[NPC[i].x][NPC[i].y] = NPC[i];
 }
 
 // World
 // state: 0 denotes player is in menu screen, 1 denotes player is in a world.
 var state = 1;
-// current_world: denotes the world the player is in.
-var current_world = 0;
+// currentWorld: denotes the world the player is in.
+var currentWorld = 0;
 
 var inventory = {x:500, y:200}//location of the inventory
 

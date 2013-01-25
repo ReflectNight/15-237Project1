@@ -6,8 +6,8 @@
 // getPlayerPos(): Gets the 50x50 square the player is inhabiting.
 function getPlayerPos(){
 	var pos = new Object();
-	pos.x = player.x / 50;
-	pos.y = (player.y - 100) / 50;
+	pos.x = Math.ceil(player.x / 50);
+	pos.y = Math.ceil((player.y - 100)/ 50);
 	
 	console.log("Player position: (" + pos.x + ", " + pos.y + ")");
 	return pos;

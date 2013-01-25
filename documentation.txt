@@ -24,6 +24,7 @@ data.js:
 
 	numItems
 	item[]
+		item[i].type
 		item[i].ID
 		item[i].name
 		item[i].description1
@@ -38,6 +39,7 @@ data.js:
 	numHint
 	numNPCs
 	NPC[]
+		NPC[i].type
 		NPC[i].ID
 		NPC[i].name
 		NPC[i].img
@@ -72,7 +74,7 @@ data.js:
 			worldMap[i].img.src
 		worldMap[i].grid[x][y]
 	state
-	current_world
+	currentWorld
 	
 	intervalID
 	timerDelay
@@ -84,11 +86,17 @@ menu.js
 	drawCredit()
 	
 items.js
+	itemAction()
+	pickUp(item)
+	switchitem(onHand,newItem)
 
 NPCs.js
+	npcAction(npc,item)
+	talk(npc)
+	hasItem(npc,item)
 	
 world.js
-	teleportMenu()
+	drawTeleportMenu()
 	goToWorld(label)
 
 player.js
