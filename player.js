@@ -57,3 +57,21 @@ function drawPlayer(){
 			break;
 	}
 }
+
+// doAction(): Tries to complete an action with the object in the same
+// grid square.
+function doAction(){
+	var pos = getPlayerPos();
+	var obj = worldMap[currentWorld].grid[pos.x][pos.y];
+	
+	if (obj !== undefined){
+		// item action
+		if (obj.type === "item"){
+			itemAction();
+		}
+		// NPC action
+		else if (obj.type === "NPC"){
+			npcAction();
+		}
+	}
+}

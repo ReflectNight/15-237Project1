@@ -5,9 +5,9 @@
 function itemAction(){
 	
 	if(arguments[0]===undefined)
-		pickup(arguments[0]);
+		pickUp(arguments[0]);
 	else{
-		switchitem(arguments[0],arguments[1]);
+		switchItem(arguments[0],arguments[1]);
 	};
 }
 
@@ -18,7 +18,7 @@ function pickUp(item){
 	printDialogue("you have picked up "+item.name+"!");//this could be randomized
 }
 
-function switchitem(onHand,newItem){
+function switchItem(onHand,newItem){
 	
 	onHand.x=newItem.x;
 	onHand.y=newItem.y;

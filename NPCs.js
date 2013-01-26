@@ -3,11 +3,11 @@
 */
 function npcAction(npc,item){
 
-	if(npc.done===true){
-		if(item==undefined)
+	if(npc.done === true){
+		if(item === undefined)
 			talk(npc);
 		else{
-			hasItem(npc,item)
+			hasItem(npc,item);
 		};
 		numTurns--;
 	}
@@ -22,7 +22,7 @@ function talk(npc){
 
 function hasItem(npc,item){
 	
-	if (item.name===npc.itemID){
+	if (item.name === npc.itemID){
 		printDialogue(npc.name+": "+npc.acceptDialogue [0]);
 		item.x=600;
 		item.y=600; // hides the item from the page

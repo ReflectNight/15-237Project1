@@ -5,7 +5,21 @@
 function updateDown(keyCode, x){
 	console.log("Key Pressed: " + keyCode);
 
+	if ((48 <= keyCode) && (keyCode <= (48 + numWorlds))){
+		if (state === 0){
+				goToWorld(keyCode - 48);
+				state = 1;
+			}
+	}
+	
 	switch (keyCode){
+	//performing an action
+		case 32: // spacebar
+			if (state !== 0){
+				doAction();
+			}
+			break;
+	
 	//WASD movement
 		case 38:
 		case 87: //w
@@ -25,7 +39,7 @@ function updateDown(keyCode, x){
 			break;
 			
 		//Teleporting
-		case 84:
+		case 84: // t
 			if (state !== 0){
 				//enter teleport menu
 				state = 0;
@@ -34,30 +48,31 @@ function updateDown(keyCode, x){
 				state = 1;
 			}
 			break;
-		case 48:
+			/*
+		case 48: // 0
 			if (state === 0){
 				goToWorld(0);
 				state = 1;
 			}
 			break;
-		case 49:
+		case 49: // 1
 			if (state === 0){
 				goToWorld(1);
 				state = 1;
 			}
 			break;
-		case 50:
+		case 50: // 2
 			if (state === 0){
 				goToWorld(2);
 				state = 1;
 			}
 			break;
-		case 51:
+		case 51: // 3
 			if (state === 0){
 				goToWorld(3);
 				state = 1;
 			}
-			break;
+			break; */
 		default:
 			break;
 	}
