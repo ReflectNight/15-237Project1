@@ -4,7 +4,7 @@ If you're curious whether a variable/function name has already been used,
 please consult these lists.
 
 --Variable List--
-startPage.html:
+data.js:
 	canvas
 	ctx
 	canvasHeight
@@ -13,7 +13,6 @@ startPage.html:
 	gameHeight
 	gameWidth
 	
-data.js:
 	startPage
 	instPage
 	creditPage
@@ -54,6 +53,7 @@ data.js:
 		NPC[i].world
 		NPC[i].x
 		NPC[i].y
+		NPC[i].done
 		
 		
 	player
@@ -62,10 +62,12 @@ data.js:
 		player.dir
 		player.img
 			player.img.src
+		player.item
 	moveUp
 	moveDown
 	moveLeft
 	moveRight
+	numTurns
 	
 	numWorlds
 	worldMap[]
@@ -75,6 +77,7 @@ data.js:
 		worldMap[i].grid[x][y]
 	state
 	currentWorld
+	inventory
 	
 	intervalID
 	timerDelay
@@ -100,7 +103,9 @@ world.js
 	goToWorld(label)
 
 player.js
+	getPlayerPos()
 	drawPlayer()
+	doAction()
 	
 listener.js
 	updateDown(keyCode, x)

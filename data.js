@@ -12,6 +12,18 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // menu.js Variables
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	var canvas = document.getElementById("c");
+	var ctx= canvas.getContext("2d");
+	
+	var canvasHeight = 600;
+	var canvasWidth = 600;
+	var canvasCenter=canvasWidth/2;
+	var gameHeight=450;
+	var gameWidth=450;
+	
+	// Will also need dimensions and coordinates for the sidebar boxes and 
+	// dialogue box.
+
 
 	var startPage = true; // wow i forgot how to code things. what even is
 	var instPage = false;
@@ -170,6 +182,7 @@ player.y = gameHeight/2 - 25;
 player.dir = 0;
 player.img = new Image();
 player.img.src = "Images/smiley.png";
+player.item = null;
 
 var moveUp = false;
 var moveDown = false;

@@ -71,7 +71,7 @@ function doAction(){
 		}
 		// NPC action
 		else if (obj.type === "NPC"){
-			npcAction();
+			npcAction(obj, player.item);
 		}
 	}
 }

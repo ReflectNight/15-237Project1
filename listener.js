@@ -48,31 +48,6 @@ function updateDown(keyCode, x){
 				state = 1;
 			}
 			break;
-			/*
-		case 48: // 0
-			if (state === 0){
-				goToWorld(0);
-				state = 1;
-			}
-			break;
-		case 49: // 1
-			if (state === 0){
-				goToWorld(1);
-				state = 1;
-			}
-			break;
-		case 50: // 2
-			if (state === 0){
-				goToWorld(2);
-				state = 1;
-			}
-			break;
-		case 51: // 3
-			if (state === 0){
-				goToWorld(3);
-				state = 1;
-			}
-			break; */
 		default:
 			break;
 	}
