@@ -134,7 +134,7 @@
 	for (var i = 0; i < numNPCs; i++)
 	{
 		NPC[i] = new Object();
-		item[i].type = "NPC";
+		NPC[i].type = "NPC";
 		NPC[i].ID = i;
 		NPC[i].img = new Image();
 		NPC[i].freeDialogue = new Array(numFree);
@@ -155,8 +155,8 @@
 	NPC[0].hintIndex = 0;
 	NPC[0].itemID = 3; //chicken
 	NPC[0].world = 0;
-	NPC[0].x = 0;
-	NPC[0].y = 0;
+	NPC[0].x = 1;
+	NPC[0].y = 1;
 	NPC[0].done=false; // initialized as false if they want an item.
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

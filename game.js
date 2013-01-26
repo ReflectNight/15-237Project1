@@ -4,8 +4,7 @@
 
 // drawBG(): Draws the background.
 function drawBG(){
-	if (currentWorld < numWorlds)
-		ctx.drawImage(worldMap[currentWorld].img, 0, 0, 450, 450); // resize to 150x150
+	ctx.drawImage(worldMap[currentWorld].img, 0, 0, 450, 450); // resize to 150x150
 }
 
 // drawObjAbove(playerLoc): Draws all objects above the player.
@@ -15,8 +14,15 @@ function drawObjAbove(playerLoc){
 		{
 			if (worldMap[currentWorld].grid[i][j] !== undefined)
 			{
-				console.log("ABOVE");
-				ctx.drawImage(worldMap[currentWorld].grid[i][j].img, i*50, j*50 + 100);
+				if (worldMap[currentWorld].grid[i][j].type === "item")
+				{
+					console.log(worldMap[currentWorld].grid[i][j].name);
+					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+						i*50, j*50 + 90);
+				}
+				else 
+					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+						i*50, j*50 + 80);
 			}
 		}
 }
@@ -28,9 +34,15 @@ function drawObjBelow(playerLoc){
 		{
 			if (worldMap[currentWorld].grid[i][j] !== undefined)
 			{
-				console.log("BELOW");
-				//console.log(worldMap[currentWorld].grid[i][j]);
-				ctx.drawImage(worldMap[currentWorld].grid[i][j].img, i*50, j*50 + 100);
+				if (worldMap[currentWorld].grid[i][j].type === "item")
+				{
+					console.log(worldMap[currentWorld].grid[i][j].name);
+					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+						i*50, j*50 + 90);
+				}
+				else 
+					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+						i*50, j*50 + 80);
 			}
 		}
 }
