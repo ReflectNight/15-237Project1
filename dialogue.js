@@ -10,7 +10,7 @@ function drawDialogue(){
 }
 
 function printDialogue(txt){
-  //drawDialogue();
+  drawDialogue();
 	
   ctx.font="20pt Monospace";
   ctx.fillStyle = "white";

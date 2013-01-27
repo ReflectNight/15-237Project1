@@ -60,16 +60,17 @@ function onTimer(){
 	drawPlayer();
 	drawObjBelow(pos.y);
 	drawTeleportMenu();
-	drawSidebar();
-	drawDialogue();
 }
 
 // run(): Executes the game.
 function run(){
 	console.log("Game start.");
 	
-	ctx.fillStyle = "#FFFFFF";
+	ctx.fillStyle = "#000";
 	ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+	
+	drawSidebar();
+	drawDialogue();
 	
 	intervalID = setInterval(onTimer, timerDelay);
 }

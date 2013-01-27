@@ -16,11 +16,13 @@ function pickUp(item){
 	item.onScreen = false;
 	item.x=inventory.x;
 	item.y=inventory.y;
+	
+	drawDialogue();
 	printDialogue("you have picked up "+item.name+"!");//this could be randomized
 }
 
 function switchItem(newItem){
-	onHand.onScreen = true;
+	player.item.onScreen = true;
 	newItem.onScreen = false;
 	
 	player.item.x=newItem.x;
@@ -30,5 +32,5 @@ function switchItem(newItem){
 	
 	player.item = newItem;
 	
-	printDialogue("You dropped "+onHand.name+" and picked up "+newItem.name+"!");
+	printDialogue("You dropped "+player.item.name+" and picked up "+newItem.name+"!");
 }

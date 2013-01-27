@@ -215,8 +215,8 @@ for (var i = 0; i < numWorlds; i++)
 }
 
 worldMap[0].img.src = "Images/Worlds/sampleBG.png";
-worldMap[1].img.src = "Images/Worlds/forest.jpg";
-worldMap[2].img.src = "Images/Worlds/flower.jpg";
+worldMap[1].img.src = "Images/Worlds/rm1.png";
+worldMap[2].img.src = "Images/Worlds/grass.png";
 worldMap[3].img.src = "Images/Worlds/sky.jpg";
 
 /** PUT ITEMS AND NPCS INTO GRID **/

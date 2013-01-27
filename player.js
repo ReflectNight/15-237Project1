@@ -64,10 +64,10 @@ function doAction(){
 	var pos = getPlayerPos();
 	var obj = worldMap[currentWorld].grid[pos.x][pos.y];
 	
-	console.log("obj: " + obj);
-	console.log("obj name: " + obj.name);
-	
 	if (obj !== undefined){
+		console.log("obj: " + obj);
+		console.log("obj name: " + obj.name);
+	
 		// item action
 		if (obj.type === "item"){
 			console.log("item action.");
