@@ -12,6 +12,7 @@ function drawDialogue(){
 function printDialogue(txt){
   drawDialogue();
 	
+	ctx.textAlign = 'left';
   ctx.font="20pt Monospace";
   ctx.fillStyle = "white";
   ctx.fillText(txt,10,500);

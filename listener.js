@@ -5,7 +5,7 @@
 function updateDown(keyCode, x){
 	console.log("Key Pressed: " + keyCode);
 
-	if ((48 <= keyCode) && (keyCode <= (48 + numWorlds))){
+	if ((48 <= keyCode) && (keyCode < (48 + numWorlds))){
 		if (state === 0){
 				goToWorld(keyCode - 48);
 				state = 1;
