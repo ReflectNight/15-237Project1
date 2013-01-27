@@ -30,6 +30,6 @@ function updateMoves(){
   ctx.fillStyle="rgb(200,40,50)";
   ctx.fillRect(gameWidth,300,size,size);
   ctx.font="30pt Monospace";
-  ctx.fillStyle=#000;
+  ctx.fillStyle="#000";
   ctx.fillText(numTurns,500,350);
 }

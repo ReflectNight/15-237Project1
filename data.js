@@ -46,6 +46,7 @@
 		item[i].type = "item";
 		item[i].ID = i;
 		item[i].img = new Image();
+		item[i].onScreen = true;
 	}
 	
 	item[0].name = "Book";

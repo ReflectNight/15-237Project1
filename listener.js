@@ -15,7 +15,7 @@ function updateDown(keyCode, x){
 	switch (keyCode){
 	//performing an action
 		case 32: // spacebar
-			if (state !== 0){
+			if (state === 1){
 				doAction();
 			}
 			break;

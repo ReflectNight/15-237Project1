@@ -16,9 +16,11 @@ function drawObjAbove(playerLoc){
 			{
 				if (worldMap[currentWorld].grid[i][j].type === "item")
 				{
-					console.log(worldMap[currentWorld].grid[i][j].name);
-					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
-						i*50, j*50 + 90);
+					if(worldMap[currentWorld].grid[i][j].onScreen){
+						//console.log(worldMap[currentWorld].grid[i][j].name);
+						ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+							i*50, j*50 + 90);
+					}
 				}
 				else 
 					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
@@ -36,9 +38,11 @@ function drawObjBelow(playerLoc){
 			{
 				if (worldMap[currentWorld].grid[i][j].type === "item")
 				{
-					console.log(worldMap[currentWorld].grid[i][j].name);
-					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
-						i*50, j*50 + 90);
+					if(worldMap[currentWorld].grid[i][j].onScreen){
+						//console.log(worldMap[currentWorld].grid[i][j].name);
+						ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
+							i*50, j*50 + 90);
+					}
 				}
 				else 
 					ctx.drawImage(worldMap[currentWorld].grid[i][j].img, 
@@ -56,6 +60,8 @@ function onTimer(){
 	drawPlayer();
 	drawObjBelow(pos.y);
 	drawTeleportMenu();
+	drawSidebar();
+	drawDialogue();
 }
 
 // run(): Executes the game.

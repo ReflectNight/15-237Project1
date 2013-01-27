@@ -30,6 +30,7 @@ data.js:
 		item[i].description2
 		item[i].img
 			item[i].img.src
+		item[i].onScreen
 		item[i].world
 		item[i].x
 		item[i].y
